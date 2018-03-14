@@ -69,7 +69,9 @@ const uint32_t LedgerManager::GENESIS_LEDGER_VERSION = 0;
 const uint32_t LedgerManager::GENESIS_LEDGER_BASE_FEE = 100;
 const uint32_t LedgerManager::GENESIS_LEDGER_BASE_RESERVE = 100000000;
 const uint32_t LedgerManager::GENESIS_LEDGER_MAX_TX_SIZE = 100;
-const int64_t LedgerManager::GENESIS_LEDGER_TOTAL_COINS = 1000000000000000000;
+//default GENESIS_LEDGER_TOTAL_COINS = 100000000000000000;
+//Supposedly sets total ammount of coins to be 21 billion
+const int64_t LedgerManager::GENESIS_LEDGER_TOTAL_COINS = 21000000000;
 
 using xdr::operator==;
 
