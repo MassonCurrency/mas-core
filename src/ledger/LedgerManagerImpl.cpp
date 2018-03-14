@@ -69,9 +69,14 @@ const uint32_t LedgerManager::GENESIS_LEDGER_VERSION = 0;
 const uint32_t LedgerManager::GENESIS_LEDGER_BASE_FEE = 100;
 const uint32_t LedgerManager::GENESIS_LEDGER_BASE_RESERVE = 100000000;
 const uint32_t LedgerManager::GENESIS_LEDGER_MAX_TX_SIZE = 100;
-//default GENESIS_LEDGER_TOTAL_COINS = 100000000000000000;
-//Supposedly sets total ammount of coins to be 21 billion
-const int64_t LedgerManager::GENESIS_LEDGER_TOTAL_COINS = 21000000000;
+//default GENESIS_LEDGER_TOTAL_COINS = 1000000000000000000;
+//default GENESIS_LEDGER_TOTAL_COINS = 10^18 stroops = 10^10 XLM == 100b XLM
+//1 stroop = 0,0000001 XLM = 10^-7 XLM
+//21b XLM = 21*10^9 XLM = 21*10^16 XLM
+//21b / 100b XLM = 0.21
+//1000000000000000000 * 0.21 = 210000000000000000
+//Sets total ammount of coins to be 21 billion
+const int64_t LedgerManager::GENESIS_LEDGER_TOTAL_COINS = 210000000000000000;
 
 using xdr::operator==;
 
