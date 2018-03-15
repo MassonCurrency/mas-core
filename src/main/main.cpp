@@ -2,7 +2,6 @@
 // under the Apache License, Version 2.0. See the COPYING file at the root
 // of this distribution or at http://www.apache.org/licenses/LICENSE-2.0
 #include "util/asio.h"
-#include "StellarCoreVersion.h"
 #include "bucket/Bucket.h"
 #include "bucket/BucketManager.h"
 #include "catchup/CatchupConfiguration.h"
@@ -23,6 +22,7 @@
 #include "main/ExternalQueue.h"
 #include "main/Maintainer.h"
 #include "main/PersistentState.h"
+#include "main/StellarCoreVersion.h"
 #include "main/dumpxdr.h"
 #include "main/fuzz.h"
 #include "test/test.h"
@@ -181,8 +181,7 @@ usage(int err = 1)
           "      --netid STRING       Specify network ID for subsequent "
           "signtxn\n"
           "                           (Default is STELLAR_NETWORK_ID "
-          "environment\n"
-          "variable)\n"
+          "environment variable)\n"
           "      --test               Run self-tests\n"
           "      --version            Print version information\n";
     exit(err);
